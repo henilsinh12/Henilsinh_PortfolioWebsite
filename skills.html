@@ -1,34 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills - Henilsinh Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills - Henilsinh Portfolio</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+/* skills layout */
+
+.skills-container{
+max-width:700px;
+margin:auto;
+margin-top:40px;
+}
+
+.skill-box{
+margin-bottom:25px;
+text-align:left;
+}
+
+.skill-title{
+display:flex;
+justify-content:space-between;
+margin-bottom:5px;
+font-weight:500;
+}
+
+.skill-bar{
+background:#1e293b;
+height:10px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-progress{
+height:10px;
+background:#38bdf8;
+width:0%;
+border-radius:20px;
+transition:width 1s ease-in-out;
+}
+
+</style>
+
 </head>
+
 <body>
-  <header>
-    <nav>
-      <h2 class="logo">Henilsinh</h2>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="skills">
-    <h1>My Skills</h1>
-    <ul>
-      <li>HTML5, CSS3, JavaScript</li>
-      <li>PHP and MySQL Basic</li>
-    </ul>
-  </section>
+<header>
+<nav>
+<h2 class="logo">Henilsinh</h2>
 
-  <footer>
-    <p> 2025 Henilsinh Matieda</p>
-  </footer>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+
+<section class="skills">
+
+<h1>My Skills</h1>
+
+<div class="skills-container">
+
+<div class="skill-box">
+<div class="skill-title">
+<span>HTML</span>
+<span>90%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" data-width="90%"></div>
+</div>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">
+<span>CSS</span>
+<span>85%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" data-width="85%"></div>
+</div>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">
+<span>JavaScript</span>
+<span>70%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" data-width="70%"></div>
+</div>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">
+<span>PHP</span>
+<span>60%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" data-width="60%"></div>
+</div>
+</div>
+
+<div class="skill-box">
+<div class="skill-title">
+<span>MySQL</span>
+<span>65%</span>
+</div>
+<div class="skill-bar">
+<div class="skill-progress" data-width="65%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+<p>© 2025 Henilsinh Matieda</p>
+</footer>
+
+
+<script>
+
+/* skill animation */
+
+const skills = document.querySelectorAll(".skill-progress");
+
+function showSkills(){
+
+skills.forEach(skill=>{
+
+let width = skill.getAttribute("data-width");
+
+skill.style.width = width;
+
+});
+
+}
+
+window.addEventListener("load",showSkills);
+
+</script>
+
 </body>
 </html>
