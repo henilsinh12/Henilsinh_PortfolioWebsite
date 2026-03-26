@@ -17,18 +17,46 @@ button {background:#007bff; color:white; padding:10px 20px; border:none; border-
 html{
 scroll-behavior:smooth;
 }
-
-
 .project-card{
 transition:0.3s;
 }
-
 .project-card:hover{
 transform:scale(1.05);
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
-
-
 nav{
 transition:0.3s;
+}
+
+
+
+/* smooth page animation */
+body{
+opacity:1;
+transition:opacity 0.3s ease-in-out;
+}
+
+/* navigation hover animation */
+nav ul li a{
+transition:0.3s;
+}
+nav ul li a:hover{
+color:#00adb5;
+}
+
+/* button animation */
+.btn{
+transition:0.3s;
+}
+.btn:hover{
+transform:scale(1.05);
+background:#00adb5;
+}
+
+/* profile image animation */
+.profile-photo{
+transition:0.4s;
+}
+.profile-photo:hover{
+transform:scale(1.1);
 }
